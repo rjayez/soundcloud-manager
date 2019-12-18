@@ -1,0 +1,60 @@
+.body{
+  background: #f3f1f1fa;
+}
+
+.App {
+  text-align: center;
+  
+}
+
+.card{
+  margin : 10px 10px 10px 10px;
+
+}
+
+.title{
+  padding-top : 10px;
+  margin-bottom: 30px;
+}
+
+.Table{
+  margin : 10px 10px 10px 10px;
+}
+
+.playlist-table{
+  display: inline;
+  margin: 15px;
+}
+
+.playlist-table-card{
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  margin-right: 10px;
+  width: 50%;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  margin-right: 25px; 
+}
+
+.button-sync-playlist{
+  float: left;
+  z-index: 1;
+  display: block;
+  margin : 10px 10px 10px 10px;
+}
+
+.button-delete{
+  background-color:grey;
+}
+
+.CreatePlaylistCompenent{
+  display: inline-block;
+}
+
+.playlist-creator{
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  width: 300px;
+  vertical-align: top;
+  margin: 5px 5px 5px 5px;
+}
