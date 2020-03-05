@@ -8,6 +8,8 @@ import getWeekNumber from './DateUtils'
 import Text from 'antd/lib/typography/Text';
 
 
+const PlaylistDispatch = React.createContext([])
+
 const openNotificationWithIcon = (type, message, description) => {
   notification[type]({
     message: message,
