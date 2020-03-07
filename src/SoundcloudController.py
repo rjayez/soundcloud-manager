@@ -1,16 +1,16 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 import SoundcloudService, SoundcloudPlaylistCreator
 from SoundcloudService import client
 from flask_cors import CORS
 
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../client/public", static_folder="../client/build/static")
 
 CORS(app)
 
 @app.route('/')
-def hello():
-    return "coucou"
+def index():
+    return render_template('index.html')
 
 
 @app.route('/me')
