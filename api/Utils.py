@@ -1,5 +1,6 @@
 from datetime import *
 
+
 # Retourne la datetime du lundi de la semaine a 00h00m00s
 def getLundiAvecNumSemaine(annee, numsemaine):
     d = str(annee) + "-W" + str(numsemaine) + "-1"

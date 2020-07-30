@@ -68,7 +68,7 @@ function PlaylistTable(props) {
 
   function listPlaylist() {
     setLoading(true);
-    axios.get('http://localhost:5000/playlists')
+    axios.get('http://localhost:3000/playlists')
       .then(response => {
         console.log(response);
         openNotificationWithIcon('success', 'Playlists à jour.', '');
@@ -99,7 +99,7 @@ function DeletePlaylistButton(props) {
 
 async function deletePlaylist(playlistId){
   console.log('playlist id : ' + playlistId)
-  return await axios.delete('http://localhost:5000/playlists/' + playlistId)
+  return await axios.delete('http://localhost:3000/playlists/' + playlistId)
   .then(response =>{
     openNotificationWithIcon('success', 'Playlists supprimer.', '');
   }, error =>{
@@ -115,7 +115,7 @@ function CreatePlaylistCompenent(props) {
 
   function createplaylist(weekNumber) {
     setLoading(true)
-    axios.post('http://localhost:5000/playlists/weekly/' + weekNumber)
+    axios.post('http://localhost:3000/playlists/weekly/' + weekNumber)
       .then(response => {
         setLoading(false);
         openNotificationWithIcon('success', 'Playlists créées !', '');

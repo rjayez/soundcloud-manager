@@ -1,0 +1,28 @@
+{
+  "name": "soundcloud-manager",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "antd": "^4.4.3",
+    "axios": "^0.19.2",
+    "dayjs": "^1.8.30",
+    "parcel": "2.0.0-beta.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "scripts": {
+    "dev": "concurrently \"yarn start\" \"yarn api\"",
+    "start": "parcel serve ./public/index.html",
+    "api": "cd ./api && python -m flask run",
+    "build": "parcel build ./public/index.html --out-dir build"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-plugin-import": "^1.13.0",
+    "concurrently": "^5.2.0",
+    "npm-check-updates": "^7.0.2"
+  }
+}

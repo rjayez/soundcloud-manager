@@ -6,6 +6,7 @@ client = soundcloud.Client(client_id=config.get('Soundcloud', 'clientid', fallba
                            username=config.get('Soundcloud', 'username', fallback='Vide'),
                            password=config.get('Soundcloud', 'password', fallback='Vide'))
 
+
 def getPlaylist():
     playlists = client.get('me/playlists')
     data = []
@@ -15,19 +16,18 @@ def getPlaylist():
     return data
 
 
-
 def getPlaylistData(playlist):
-
     data = {"titre": playlist.title,
             "url_image": playlist.artwork_url,
-            "uri" : playlist.uri,
-            "nb" : len(playlist.tracks),
-            "key" : playlist.id
+            "uri": playlist.uri,
+            "nb": len(playlist.tracks),
+            "key": playlist.id
             }
     return data
 
+
 def deletePlaylist(playlistId):
-    response = client.delete('me/playlists/' + str(playlistId))
+    response = client.delete('/playlists/' + str(playlistId))
     print(response)
 
 
@@ -35,7 +35,3 @@ def testPlaylist():
     activities = client.get('/me/activities')
     print(activities)
     return ''
-
-
-
-
