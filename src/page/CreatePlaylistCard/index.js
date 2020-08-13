@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import {getWeekNumber} from "../utils/DateUtils";
 import {createPlaylist} from "../services";
 import {Button, Card, InputNumber} from "antd";
-import {PlusCircleOutlined} from "@ant-design/icons";
+import {PlusCircleTwoTone} from "@ant-design/icons";
 
 const CreatePlaylistCard = () => {
     // const [load, setLoad] = useState(false);
@@ -11,8 +11,6 @@ const CreatePlaylistCard = () => {
 
     const onClickCreate = () => {
         setLoading(true);
-        console.info("coucou")
-        console.info(loading);
         createPlaylist(selectedNumberWeek)
             .finally(() => setLoading(false));
     };
@@ -22,7 +20,7 @@ const CreatePlaylistCard = () => {
             <p>Numéro de semaine : </p>
             <InputNumber style={{margin: "5px"}} min={0} max={53} defaultValue={getWeekNumber(new Date())}
                          onChange={value => setSelectedNumberWeek(value)}/>
-            <Button type="primary" icon={<PlusCircleOutlined />} loading={loading} onClick={onClickCreate}>
+            <Button type="default" icon={<PlusCircleTwoTone />} loading={loading} onClick={onClickCreate}>
                 Créer Playlists
             </Button>
         </Card>

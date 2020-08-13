@@ -14,8 +14,8 @@
   "scripts": {
     "dev": "concurrently \"yarn start\" \"yarn api\"",
     "start": "parcel serve ./public/index.html",
-    "api": "cd ./api && python -m flask run",
-    "build": "parcel build ./public/index.html --out-dir build"
+    "api": "cd ./api/flask_soundcloud_env/Scripts/ && activate.bat  &&  python -m flask run",
+    "build": "parcel build ./public/index.html --dist-dir build"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
